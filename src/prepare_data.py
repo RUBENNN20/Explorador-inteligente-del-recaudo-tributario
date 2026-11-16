@@ -49,8 +49,7 @@ def write_csv(path, fields, rows):
     with path.open('w',newline='',encoding='utf-8-sig') as f:
         w=csv.DictWriter(f,fieldnames=fields); w.writeheader(); w.writerows(rows)
 
-# Annual national series, retaining the DIAN published columns without summing
-# nested subtotals (to avoid double counting when categories overlap).
+
 annual_file = next(RAW.glob('Recaudo-anual*.zip'))
 annual_rows = open_workbook(annual_file)
 annual_header = next(r for r in annual_rows if (r.get('B') or '').strip().upper()=='ACTIVIDAD INTERNA')
@@ -72,13 +71,11 @@ for y in (2024,2025):
     vals['IVA total (interno + externo)']=round(vals['IVA actividad interna']+vals['IVA actividad externa'],6)
     annual_reference.extend({'year':y,'tax':tax,'value_millions':value} for tax,value in vals.items() if tax=='IVA total (interno + externo)')
 write_csv(ROOT/'results'/'annual_comparison_2024_2025.csv',['year','tax','value_millions'],annual_reference)
-# Monthly national series: keep the two broad internal tax categories that are
-# explicitly identified in the DIAN source sheet.
+
 monthly_file = next(RAW.glob('Recaudo-mensual*.zip'))
 rows = open_workbook(monthly_file)
 header = next(r for r in rows if r.get('A') == 'Año' and r.get('B') == 'Mes')
-# Preserve every numeric tax column from the DIAN monthly table. Keep source
-# aggregates and components as separate rows; never sum them together.
+
 metric_cols={col:label.strip() for col,label in header.items() if col not in ('A','B') and label}
 metric_cols['D']='Renta total'
 metric_cols['G']='IVA interno'
@@ -92,7 +89,6 @@ for row in rows:
             monthly.append({'year':int(year),'month':month,'tax':tax,'value_millions':round(value,6)})
 write_csv(OUT/'recaudo_mensual_nacional.csv',['year','month','tax','value_millions'],monthly)
 
-# Annual territorial data in long format, preserving the DIAN seccional label.
 territorial_file = next(RAW.glob('Recaudo-bruto-por-seccionales*.xlsx'))
 rows = open_workbook(territorial_file)
 head_idx = next(i for i,r in enumerate(rows) if (r.get('A') or '').strip().upper()=='AÑO' and 'SECCIONAL' in (r.get('B') or '').upper())

@@ -12,8 +12,7 @@ def robust_score(value, history):
     med=statistics.median(history)
     mad=statistics.median([abs(x-med) for x in history])
     if mad > 0: return (value-med)/(1.4826*mad),med,mad
-    # If history is constant, any nonzero difference is noteworthy, but avoid
-    # division by zero and report the raw difference as the score.
+    
     return (0.0 if value==med else math.copysign(float('inf'),value-med)),med,mad
 
 with SOURCE.open(encoding='utf-8-sig',newline='') as f:
@@ -29,8 +28,7 @@ for (tax,month),items in series.items():
     items.sort()
     history=[]
     for year,value,label in items:
-        # 2026 is year-to-date through September, so exclude it from comparable
-        # complete-year baseline outputs. Future months do not affect any score.
+       
         if year>2025: continue
         if len(history)>=MIN_HISTORY:
             score,med,mad=robust_score(value,[x[1] for x in history])
