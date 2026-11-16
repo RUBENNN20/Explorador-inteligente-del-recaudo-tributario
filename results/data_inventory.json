@@ -1,0 +1,53 @@
+{
+  "annual_records": 1539,
+  "annual_years": [
+    1970,
+    2026
+  ],
+  "annual_tax_categories": 27,
+  "monthly_records": 9330,
+  "monthly_years": [
+    2000,
+    2026
+  ],
+  "monthly_taxes": [
+    "1.1.Renta-Cuotas /2",
+    "1.2.Retención Renta/3",
+    "10. Impuesto al Carbono /8",
+    "11.1 CREE Declaraciones /9",
+    "11.2 CREE Retención",
+    "11.CREE (11.1+11.2)",
+    "12. Impuesto unificado RST (Simple)  /10",
+    "13. Impuesto de normalización tributaria /11",
+    "14. Consumo bienes inmuebles /12",
+    "15. Productos plásticos de un solo uso /13",
+    "16. Impuestos saludables - Bebidas azucaradas /14",
+    "17. Impuestos saludables - Comestibles ultraprocesados /15",
+    "18. Impuesto especial para el Catatumbo/17",
+    "19.Arancel",
+    "2.1. Declaraciones IVA /4",
+    "2.2. Retención IVA",
+    "20. IVA Externo",
+    "3. G.M.F.",
+    "4. Timbre",
+    "5. Seguridad Democrática",
+    "6. Patrimonio/5",
+    "7. Riqueza /6",
+    "8. Impuesto al Consumo /7",
+    "9. Impuesto Gasolina y ACPM",
+    "A. Internos (1+...+18)",
+    "B. Externos (19+20)",
+    "C. Por Clasificar /16",
+    "IVA interno",
+    "Renta total",
+    "Total (A+B+C)"
+  ],
+  "monthly_tax_categories": 30,
+  "territorial_records": 17105,
+  "territorial_years": [
+    2005,
+    2026
+  ],
+  "seccionales": 52,
+  "territorial_tax_categories": 24
+}

@@ -1,0 +1,125 @@
+{
+  "method": "same-month historical median and MAD; prior years only",
+  "minimum_prior_years": 6,
+  "threshold_abs_robust_z": 3.5,
+  "analysis_years": "2000-2025; partial 2026 excluded",
+  "baseline_taxes": [
+    "IVA interno",
+    "Renta total"
+  ],
+  "records_scored": 480,
+  "alerts_count": 57,
+  "top_alerts": [
+    {
+      "year": 2007,
+      "month": "Mayo",
+      "tax": "Renta total",
+      "value_millions": 3543695.331,
+      "historical_median_millions": 781180.382,
+      "historical_mad_millions": 173979.299,
+      "robust_z_score": 10.71,
+      "prior_years": 7,
+      "baseline": "same calendar month, prior years only"
+    },
+    {
+      "year": 2023,
+      "month": "Agosto",
+      "tax": "Renta total",
+      "value_millions": 17010480.158,
+      "historical_median_millions": 3033360.64,
+      "historical_mad_millions": 1109086.993,
+      "robust_z_score": 8.5,
+      "prior_years": 23,
+      "baseline": "same calendar month, prior years only"
+    },
+    {
+      "year": 2006,
+      "month": "Febrero",
+      "tax": "Renta total",
+      "value_millions": 2155035.594,
+      "historical_median_millions": 1124146.903,
+      "historical_mad_millions": 99334.487,
+      "robust_z_score": 7.0,
+      "prior_years": 6,
+      "baseline": "same calendar month, prior years only"
+    },
+    {
+      "year": 2024,
+      "month": "Mayo",
+      "tax": "Renta total",
+      "value_millions": 14059642.499,
+      "historical_median_millions": 2011972.084,
+      "historical_mad_millions": 1161773.027,
+      "robust_z_score": 6.995,
+      "prior_years": 24,
+      "baseline": "same calendar month, prior years only"
+    },
+    {
+      "year": 2023,
+      "month": "Julio",
+      "tax": "Renta total",
+      "value_millions": 11634359.573,
+      "historical_median_millions": 1945224.769,
+      "historical_mad_millions": 992787.849,
+      "robust_z_score": 6.583,
+      "prior_years": 23,
+      "baseline": "same calendar month, prior years only"
+    },
+    {
+      "year": 2025,
+      "month": "Octubre",
+      "tax": "Renta total",
+      "value_millions": 10836630.352,
+      "historical_median_millions": 2219748.483,
+      "historical_mad_millions": 945389.176,
+      "robust_z_score": 6.148,
+      "prior_years": 25,
+      "baseline": "same calendar month, prior years only"
+    },
+    {
+      "year": 2018,
+      "month": "Diciembre",
+      "tax": "Renta total",
+      "value_millions": 7494902.106,
+      "historical_median_millions": 1579902.027,
+      "historical_mad_millions": 664245.991,
+      "robust_z_score": 6.006,
+      "prior_years": 18,
+      "baseline": "same calendar month, prior years only"
+    },
+    {
+      "year": 2025,
+      "month": "Mayo",
+      "tax": "Renta total",
+      "value_millions": 14331489.365,
+      "historical_median_millions": 2170025.6,
+      "historical_mad_millions": 1373669.731,
+      "robust_z_score": 5.971,
+      "prior_years": 25,
+      "baseline": "same calendar month, prior years only"
+    },
+    {
+      "year": 2024,
+      "month": "Julio",
+      "tax": "Renta total",
+      "value_millions": 11644952.848,
+      "historical_median_millions": 1975180.339,
+      "historical_mad_millions": 1099443.878,
+      "robust_z_score": 5.932,
+      "prior_years": 24,
+      "baseline": "same calendar month, prior years only"
+    },
+    {
+      "year": 2007,
+      "month": "Febrero",
+      "tax": "Renta total",
+      "value_millions": 2567191.76,
+      "historical_median_millions": 1132826.186,
+      "historical_mad_millions": 164101.377,
+      "robust_z_score": 5.896,
+      "prior_years": 7,
+      "baseline": "same calendar month, prior years only"
+    }
+  ],
+  "interpretation": "Exploratory statistical flags only; not causal explanations, tax audit findings, or proof of fraud."
+}
